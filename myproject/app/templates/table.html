@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="vieport" content="width=device-width" , initial-scale="1.0">
+        <title>table</title>
+        <!-- <link href="../../static/css/table.css" rel="stylesheet"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+  
+        <table id="table" class="table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>날짜</th>
+                    <th>작성자</th>
+                </tr>   
+            </thead>
+        </table>
+        <script>
+
+
+            let temp_requests = $.get('/data/data');
+            console.log("test1")
+            let i= 0;
+            let viewTime = 2;
+            
+            run = setInterval(function(){
+                
+                
+                console.log('불러오기 시작')
+                let rq_1 = temp_requests.done(function (data)
+                {
+                    
+
+                  
+                        
+                });
+            
+
+
+                    console.log('불러오기 끝')
+            }, viewTime*1000);
+            
+            
+            
+            let temp_requests = $.get('/data/data');
+            let rq_1 = temp_requests.done(function (data){
+            
+                let serverData = [
+                    {Time:1, Temp:'온도', Humi: '습도', Illu: '조도'},
+                    {Time:2, Temp:'온도', Humi: '습도', Illu: '조도'},
+                    {Time:3, Temp:'온도', Humi: '습도', Illu: '조도'},
+                    {Time:4, Temp:'온도', Humi: '습도', Illu: '조도'},
+                    {Time:5, Temp:'온도', Humi: '습도', Illu: '조도'},
+                    {Time:6, Temp:'온도', Humi: '습도', Illu: '조도'}
+                ];
+                //
+                function toDOM(row) {
+                    var tr = '';
+                    tr += '<tr>';
+                    tr += '  <td>' + row.Time + '</td>';
+                    tr += '  <td>' + row.Temp + '</td>';
+                    tr += '  <td>' + row.Humi + '</td>';
+                    tr += '  <td>' + row.Illu + '</td>';
+                    tr += '</tr>';
+                    return tr;
+                }
+                // trlist 생성
+                function renderTable(id, datalist){
+                    var size = datalist.length;
+                    var trList = '';
+                     
+                    for(var i=0; i<size; i++) {
+                        trList += toDOM(datalist);
+                    }
+                    document.querySelector('#' + id + ' tbody').innerHTML = trList;  
+                }
+
+                window.onload = function () {
+                    renderTable('table', serverData);
+                }
+            })
+        </script>
+    </body>
+</html>

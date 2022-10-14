@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+/* 글꼴 임포트 */
+
+
+
+*{
+    font-family: 'Dancing Script', cursive;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    align-self: auto;
+}
+
+.wrap{
+    display: flex;
+}
+.intro_bg{
+    background-color: rgb(255, 255, 255);
+    width: 330px;
+    height: 5000px;
+    border-right: solid black;
+    margin: 0px;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 600px;
+    margin: auto;
+}
+
+
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 86px;
+    /* width: calc(1280px - 300px); */
+    font-weight: bolder;
+    font-size:30px;
+}
+
+.nav > li{
+    width: 300px;
+}
+
+.nav > li{
+    margin-left: 30px;
+    width: 300px;
+}
+
+.nav > li > a{
+color: rgb(95, 60, 31);
+font-size: 25px;
+}
+
+
+
+
+
+
+
+
+.intro_bg2{
+    /* background-image:url(../image/back.PNG) ; */
+    /* background-size: cover; */
+    background-color: rgb(255, 255, 255);
+    width: 8000px;
+    height: 5000px;
+}
+
+.header2{
+    display: flex;
+    width: 1100px;
+    height: 731px;
+    margin: 70px;
+    margin-top: 70px;
+    background-image: url(../../image/back2.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+
+#chk1{
+    position: absolute;
+    left: -1000%;
+}
+
+#label1{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background-color: #d3d3d3;
+    border-radius: 60px;
+    transition:background .4s;
+}
+
+#label1:after{content: "";
+    position: absolute;
+    left: 7.5px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-image: url(../../image/온도png-removebg-preview.png) ;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    transform: translateY(-50%);
+    box-shadow: 1px 3px 4px rgba(0, 0,0,.1);
+    transition: all .4s;
+
+}
+
+#chk1:checked + #label1{
+    background-color: #4fbe79;
+}
+#chk1:checked + #label1::after{
+    left: calc(100% - 52.5px);
+}
+
+#label1 span{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+#chk2{
+    position: absolute;
+    left: -1000%;
+}
+
+#label2{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background-color: #d3d3d3;
+    border-radius: 60px;
+    transition:background .4s;
+}
+
+#label2:after{content: "";
+    position: absolute;
+    left: 7.5px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-image: url(../../image/습도-removebg-preview.png) ;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    transform: translateY(-50%);
+    box-shadow: 1px 3px 4px rgba(0, 0,0,.1);
+    transition: all .4s;
+
+}
+
+#chk2:checked + #label2{
+    background-color: #4fbe79;
+}
+#chk2:checked + #label2::after{left: calc(100% - 52.5px);
+}
+
+#label2 span{
+    display: none;
+}
+
+#chk3{
+    position: absolute;
+    left: -1000%;
+}
+
+#label3{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background-color: #d3d3d3;
+    border-radius: 60px;
+    transition:background .4s;
+}
+
+#label3:after{content: "";
+    position: absolute;
+    left: 7.5px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-image: url(../../image/조도-removebg-preview\ \(1\).png) ;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    transform: translateY(-50%);
+    box-shadow: 1px 3px 4px rgba(0, 0,0,.1);
+    transition: all .4s;
+
+}
+
+#chk3:checked + #label3{
+    background-color: #4fbe79;
+}
+#chk3:checked + #label3::after{left: calc(100% - 52.5px);
+}
+
+#label3 span{
+    display: none;
+}
+
+
+
+
+
+#chk4{
+    position: absolute;
+    left: -1000%;
+}
+
+#label4{
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    background-color: #d3d3d3;
+    border-radius: 60px;
+    transition:background .4s;
+}
+
+#label4:after{content: "";
+    position: absolute;
+    left: 7.5px;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-image: url(../../image/auto.png) ;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    transform: translateY(-50%);
+    box-shadow: 1px 3px 4px rgba(0, 0,0,.1);
+    transition: all .4s;
+
+}
+
+#chk4:checked + #label4{
+    background-color: #4fbe79;
+}
+#chk4:checked + #label4::after{left: calc(100% - 52.5px);
+}
+
+#label4 span{
+    display: none;
+}
+
+
+/* .checkbutton1{
+    margin: 10px;
+} */

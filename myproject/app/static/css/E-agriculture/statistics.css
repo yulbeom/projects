@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+/* 글꼴 임포트 */
+
+
+
+*{
+    font-family: 'Dancing Script', cursive;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    align-self: auto;
+}
+
+.wrap{
+    display: flex;
+}
+.intro_bg{
+    background-color: rgb(255, 255, 255);
+    width: 330px;
+    height: 5000px;
+    border-right: solid black;
+    margin: 0px;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 600px;
+    margin: auto;
+}
+
+
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 86px;
+    /* width: calc(1280px - 300px); */
+    font-weight: bolder;
+    font-size:30px;
+}
+
+.nav > li{
+    width: 300px;
+}
+
+.nav > li{
+    margin-left: 30px;
+    width: 300px;
+}
+
+.nav > li > a{
+color: rgb(95, 60, 31);
+font-size: 25px;
+}
+
+
+.intro_bg2{
+    /* background-image:url(../../image/back3.jpg) ;
+    background-size: cover; */
+    background-color: rgb(255, 255, 255);
+    width: 8000px;
+    height: 5000px;
+}
+
+.header2{
+    display: flex;
+    width: 1100px;
+    height: 731px;
+    margin: 70px;
+    margin-top: 70px;
+    /* background-image: url(../../image/back2.jpg); */
+    background-size: cover;
+    border: 2px solid rgb(115, 84, 59);
+}
+
+
+/* #contents{
+    background: rgb(255, 255, 255);
+    width: 500px;
+    height: 500px;
+    border: 2px solid red;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 30px;
+} */
+
+/* .header2 > li{
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    margin-top: 50px;
+    height: 250px;
+} */
+
+
+.abc1{
+   display: flex;
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 1100px;
+    height: 365.5px;
+    background-color: rgb(154, 161, 168);
+}
+
+.abc1 > li{
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    margin-top: 50px;
+    height: 310px;
+}
+
+.abc2{
+    display: flex;
+    margin-left: 50px;
+    /* margin-top: 50px; */
+     width: 1100px;
+     height: 365.5px;
+     background-color: rgb(154, 161, 168);
+ }
+ 
+ .abc2 > li{
+     flex: 1;
+     background-color: rgb(255, 255, 255);
+     margin: 5px;
+     /* margin-top: 50px; */
+     height: 310px;
+ }

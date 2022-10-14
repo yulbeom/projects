@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+/* 글꼴 임포트 */
+
+
+
+*{
+    font-family: 'Dancing Script', cursive;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    align-self: auto;
+}
+
+.wrap{
+    display: flex;
+}
+.intro_bg{
+    background-color: rgb(255, 255, 255);
+    width: 330px;
+    height: 5000px;
+    border-right: solid black;
+    margin: 0px;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 600px;
+    margin: auto;
+}
+
+
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 86px;
+    /* width: calc(1280px - 300px); */
+    font-weight: bolder;
+    font-size:30px;
+}
+
+.nav > li{
+    width: 300px;
+}
+
+.nav > li{
+    margin-left: 30px;
+    width: 300px;
+}
+
+.nav > li > a{
+color: rgb(95, 60, 31);
+font-size: 25px;
+}
+
+

@@ -1,0 +1,39 @@
+/* table{
+    width: 1000px;
+    border-collapse: collapse;
+
+}
+table td , th{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+
+
+table th{
+    background-color: dodgerblue;
+    color: #fff;
+}
+
+body{
+    font-size: 14px;
+}
+
+caption{
+    text-align: right;
+    margin-bottom: 10px;
+} */
+
+.table {
+    border-collapse: collapse;
+    border: 1px solid #333;
+    width: 100%;
+  }
+  .table th {
+    border: 1px solid #333;
+  }
+  .table td {
+    border: 1px solid #333;
+    text-align: center;
+  }
+  

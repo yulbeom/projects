@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+/* 글꼴 임포트 */
+
+
+
+*{
+    /* font-family: 'Dancing Script', cursive; */
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    align-self: auto;
+}
+
+.wrap{
+    display: flex;
+}
+.intro_bg{
+    background-color: rgb(255, 255, 255);
+    width: 330px;
+    height: 5000px;
+    border-right: solid black;
+    margin: 0px;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 600px;
+    margin: auto;
+}
+
+
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: 86px;
+    font-weight: bolder;
+    font-size:30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.nav > li{
+    width: 300px;
+}
+
+.nav > li{
+    margin-left: 30px;
+    width: 300px;
+}
+
+.nav > li > a{
+color: rgb(95, 60, 31);
+font-size: 25px;
+}
+
+.wrap{
+    display: flex;
+}
+
+
+.intro_bg2{
+    /* background-image:url(../../image/back3.jpg) ;
+    background-size: cover; */
+    background-color: rgb(255, 255, 255);
+    width: 8000px;
+    height: 5000px;
+}
+
+.header2{
+    display: flex;
+    width: 1100px;
+    height: 731px;
+    margin: 70px;
+    margin-top: 70px;
+    /* background-image: url(../../image/back2.jpg); */
+    background-size: cover;
+}
+
+.bg3{background: rgb(129, 92, 74);
+    width: 1200px;
+    height: 550px;
+    border: 5px solid rgb(129, 92, 74);
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    border-radius: 20px;
+    /* display: flex; */
+
+}
+
+.contents{
+    background: rgb(255, 255, 255);
+    background-image: url(../../image/팝필터.png);
+    background-size: contain;
+    width: 1030px;
+    height: 430px;
+    border: 5px solid rgb(129, 92, 74);
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 25px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 30px;
+    /* display: flex; */
+}
+.cicon{
+    font-size: 30px;
+}
+
+.contents> h2, div{
+    color: white;
+    
+}
+
+.contents>h2{
+    margin-top: 20px;
+    margin-left: 70px;
+    font-size: 120px;
+    
+    
+}
+
+.contents>div{
+    margin-left: 70px;
+    display: flex;
+}
+
+.bg3>.cicon{
+    width: 50px;
+    height: 50px;
+    background: white;
+    margin: auto;
+    margin-top: 10px;
+}

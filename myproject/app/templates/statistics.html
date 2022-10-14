@@ -1,0 +1,153 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+	<script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	
+	<!-- <script
+	src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"
+  ></script> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+	<title>chartist</title>
+</head>
+<body>
+	
+	<div class="temp-chart ct-perfect-fourth"></div>
+	<div class="humi-chart ct-perfect-fourth"></div>
+	<div class="illu-chart ct-perfect-fourth"></div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		
+
+		
+	
+		let temp_requests = $.get('/graph/temp');
+		console.log("test1")
+		let i= 0;
+		let viewTime = 2;
+		
+		
+		run = setInterval(function(){
+			
+			
+			console.log('불러오기 시작')
+			let rq_1 = temp_requests.done(function (data)
+			{
+				let temp_data = {
+					labels: ['1', '2','3' , '4', '5', '6'],
+					series: [
+						data.temp
+					]
+					
+				};
+				
+				let temp_options = {
+					high: 100,
+					low: 0,
+					width: 500,
+					height: 300
+
+				};
+			
+				let mychart_temp = new Chartist.Line('.temp-chart', temp_data, temp_options);		
+			
+			});
+
+
+			console.log('불러오기 끝')
+		}, viewTime*1000);
+
+// --------------------------------------------------------------
+
+
+		let humi_requests = $.get('/graph/humi');
+	
+		console.log("test2")
+		
+	
+
+		run = setInterval(function(){
+
+		
+			console.log('불러오기 시작')
+
+			let rq_1 = humi_requests.done(function (data)
+			{
+				let humi_data = {
+					labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+					series: [
+						data.humi
+					]
+				
+				};
+			
+				let humi_options = {
+					high: 100,
+					low: 0,
+					width: 500,
+					height: 300
+
+				};
+		
+				let mychart_humi = new Chartist.Line('.humi-chart', humi_data, humi_options);	
+			});
+
+
+			console.log('불러오기 끝')
+		}, viewTime*1000);
+		
+	
+// ---------------------------------------------------------------------------------------
+
+
+		let illu_requests = $.get('/graph/illu');
+	
+		console.log("test3")
+		
+		
+ 
+		run = setInterval(function(){
+
+			
+			console.log('불러오기 시작')
+
+			let rq_1 = illu_requests.done(function (data)
+			{
+				let illu_data = {
+					labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+					series: [
+						data.illu
+					]
+					
+				};
+				
+				let illu_options = {
+					high: 300,
+					low: 0,
+					width: 500,
+					height: 300
+
+				};
+			
+				let mychart_illu = new Chartist.Line('.illu-chart', illu_data, illu_options);	
+			
+			});
+
+
+			console.log('불러오기 끝')
+		}, viewTime*1000);
+
+				
+// --------------------------------------------------------------
+
+	</script>
+</body>
+</html>
+
+
+		

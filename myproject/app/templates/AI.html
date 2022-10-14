@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="vieport" content="width=device-width" , initial-scale="1.0">
+        <title>A.I data</title>
+        <link href="../static/css/E-agriculture/A.I_data.css" rel="stylesheet">
+    </head>
+    <body>
+        {% include "nav_agriculture.html" %}
+        <script>
+            
+            let temp_requests = $.get('/A.I/output');
+            console.log("test1")
+            let i= 0;
+            let viewTime = 2;
+            
+            
+            run = setInterval(function(){
+                
+                
+                console.log('불러오기 시작')
+                let rq_1 = temp_requests.done(function (data)
+                {
+                    let temp_data = {
+                        labels: ['Mon', 'Tue','Wed' , 'Thu', 'Fri', 'Sat'],
+                        series: [
+                            data.output
+                        ]
+                        
+                    };
+                    
+                    let temp_options = {
+                        high: 100,
+                        low: 0,
+                        width: 500,
+                        height: 300
+
+                    };
+                
+                    let mychart_temp = new Chartist.Line('.temp-chart', temp_data, temp_options);		
+                
+                });
+
+
+                console.log('불러오기 끝')
+            }, viewTime*1000);
+        
+        </script>
+    </body>
+</html>
